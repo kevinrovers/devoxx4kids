@@ -1,0 +1,726 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devoxx4Kids Online</title>
+
+    <style type="text/css">
+        p.MsoNormal {
+            display: none !important;
+        }
+
+        p {
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        img, a img {
+            border: 0;
+            height: auto;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body, #bodyTable, #bodyCell {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        #bodyWrap {
+            width: 100%;
+            max-width: 600px !important;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        p, a, li, td, blockquote {
+            mso-line-height-rule: exactly;
+        }
+
+        a[href^=tel], a[href^=sms] {
+            color: inherit;
+            cursor: default;
+            text-decoration: none;
+        }
+
+        p, a, li, td, body, table, blockquote {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .mImage {
+            vertical-align: bottom;
+        }
+
+        .TextContent {
+            word-break: break-word;
+        }
+
+        .TextContent img {
+            height: auto !important;
+        }
+
+        .DividerBlock {
+            table-layout: fixed !important;
+        }
+
+        /*Headers*/
+        h1 {
+            color: #222222;
+            font-family: Helvetica;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 150%;
+            letter-spacing: normal;
+            text-align: center;
+        }
+
+        h2 {
+            color: #222222;
+            font-family: Helvetica;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 150%;
+            letter-spacing: normal;
+            text-align: left;
+        }
+
+        h3 {
+            color: #444444;
+            font-family: Helvetica;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 150%;
+            letter-spacing: normal;
+            text-align: left;
+        }
+
+        h4 {
+            color: #949494;
+            font-family: Helvetica;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: normal;
+            line-height: 125%;
+            letter-spacing: normal;
+            text-align: center;
+        }
+
+        .headerContainer .TextContent, .headerContainer .TextContent p {
+            color: #757575;
+            font-family: Helvetica;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: left;
+        }
+
+        .headerContainer .TextContent a, .headerContainer .TextContent p a {
+            color: #007C89;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+        /* BODY */
+        #templateBody {
+            background-color: #ffffff;
+            border-top: 0;
+            border-bottom: 0;
+            padding-bottom: 31px;
+        }
+
+        .bodyContainer {
+            background-color: #transparent;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top: 0;
+            border-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .bodyContainer .TextContent, .bodyContainer .TextContent p {
+            color: #393B3F;
+            font-family: Helvetica;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: left;
+        }
+
+        .bodyContainer .TextContent a, .bodyContainer .TextContent p a {
+            color: #007C89;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+        .footerContainer {
+            background-color: transparent;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top: 0;
+            border-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .footerContainer .TextContent a, .footerContainer .TextContent p a {
+            color: #FFFFFF;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+        img#footerLogo {
+            display: inline-block;
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        #footerNote {
+            background-color: white;
+            color: #393B3F;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+
+            body, table, td, p, a, li, blockquote {
+                -webkit-text-size-adjust: none !important;
+            }
+
+            body {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            h1 {
+                font-size: 30px !important;
+                line-height: 125% !important;
+            }
+
+            h2 {
+                font-size: 26px !important;
+                line-height: 125% !important;
+            }
+
+            h3 {
+                font-size: 21px !important;
+                line-height: 150% !important;
+            }
+
+            h4 {
+                font-size: 18px !important;
+                line-height: 150% !important;
+            }
+
+            .mImage {
+                width: 100% !important;
+            }
+
+            .TextContentContainer, .CaptionLeftTextContentContainer, .CaptionRightTextContentContainer, .CaptionLeftImageContentContainer, .CaptionRightImageContentContainer {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            .CaptionLeftImageContentContainer img, .CaptionRightImageContentContainer img {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            .CaptionRightTextContentContainer .TextContent,
+            .CaptionLeftTextContentContainer .TextContent {
+                padding: 0 0 24px !important;
+            }
+
+            .BoxedTextContentContainer .TextContent, .BoxedTextContentContainer .TextContent p {
+                font-size: 14px !important;
+                line-height: 150% !important;
+            }
+
+            .headerContainer .TextContent, .headerContainer .TextContent p {
+                font-size: 16px !important;
+                line-height: 150% !important;
+            }
+
+            .bodyContainer .TextContent, .bodyContainer .TextContent p {
+                font-size: 16px !important;
+                line-height: 150% !important;
+            }
+
+            .footerContainer .TextContent, .footerContainer .TextContent p {
+                font-size: 14px !important;
+                line-height: 150% !important;
+            }
+        }
+    </style>
+    <meta content="noindex, nofollow" name="robots"/>
+</head>
+
+<body>
+<center>
+    <table id="bodyTable" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tr>
+            <td align="center" valign="top" id="bodyCell">
+                <!-- BEGIN TEMPLATE // -->
+                <table id="bodyWrap" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td width="100%" style="text-align: center; padding: 7px 0;">
+                            <a target="_blank"
+                               style="font-family: Helvetica, Arial; font-size: 14px; line-height: 1.6; color: #393B3F;"
+                               href="#">Webversie</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0 18px 0 18px;">
+                    <tr>
+                        <td align="center" valign="top" id="templateBody" style="padding: 0 18px 0 18px;">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   class="templateContainer">
+                                <tr>
+                                    <td valign="top" class="bodyContainer">
+
+                                        <table class="TextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               style="width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top" class="TextBlockInner" style="padding: 22px 0 15px;">
+                                                    <table class="TextContentContainer" align="left" border="0"
+                                                           cellpadding="0" cellspacing="0" width="100%"
+                                                           style="width:100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="TextContent"
+                                                                style="padding: 0px 31px 9px;color: white; text-align: left;">
+
+                                                                <img border="0"
+                                                                     width="450"
+                                                                     src="http://www.devoxx4kids.org/netherlands/wp-content/uploads/sites/9/2014/03/D4K_NL_1000px.png">
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td width="100%" style="width: 100%; padding: 5px 18px;">
+                                                    <h3 style="font-family: Helvetica, Arial; color: #352d84; font-size: 28px; text-align: center;">
+                                                        Devoxx4Kids Online - Doolhof editie
+                                                    </h3>
+                                                    <h3 style="font-family: Helvetica, Arial; font-size: 16px; text-align: center;">
+                                                        Ben je tussen de 9 en 14 jaar en heb jij altijd al een game
+                                                        willen ontwikkelen? Schrijf je dan in voor Devoxx4Kids Online.
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td width="100%" style="width: 100%; padding: 5px 18px;"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <table class="CaptionBlock" border="0" cellpadding="0" cellspacing="0"
+                                               width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td class="CaptionBlockInner" valign="top">
+                                                    <table class="CaptionRightContentOuter" border="0" cellpadding="0"
+                                                           cellspacing="0" width="100%"
+                                                           style="width: 100%; border-collapse: collapse;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="CaptionRightContentInner" valign="top">
+                                                                <table class="CaptionRightImageContentContainer"
+                                                                       align="left" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="282"
+                                                                       style="border-collapse: collapse; text-align: left;">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td class="CaptionRightImageContent"
+                                                                            align="center" valign="top">
+                                                                            <img src="devoxx_trainer.png"
+                                                                                 class="mImage" width="282" alt=""
+                                                                                 style="display: block; margin: 0;">
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <table class="CaptionRightTextContentContainer"
+                                                                       align="right" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="265"
+                                                                       style="border-collapse: collapse;">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" class="TextContent">
+                                                                            <h3 style="margin: 8px 0 6px; line-height: 1.1; color: #352d84; font-size:21px;">
+                                                                                Bouw je eigen spel
+                                                                            </h3>
+                                                                            <p style="list-style: none; padding: 0; margin: 0; font-size:15px; line-height: 1.6; color: #393B3F;">
+                                                                                Ordina organiseert op donderdag 28 mei
+                                                                                en vrijdag 29 mei 2020 een online
+                                                                                Devoxx4Kids sessie, gewoon te volgen
+                                                                                vanuit de huiskamer thuis. Devoxx4Kids
+                                                                                heeft als doel kinderen in de
+                                                                                leeftijdscategorie van 9-14 jaar op een
+                                                                                leuke manier te inspireren voor
+                                                                                programmeren.
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="CaptionBlock">
+                                            <tbody>
+                                            <tr>
+                                                <td class="CaptionBlockInner" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                           class="CaptionLeftContentOuter" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="CaptionLeftContentInner">
+                                                                <table class="CaptionLeftImageContentContainer"
+                                                                       align="right" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="282">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td class="CaptionLeftImageContent"
+                                                                            align="center" valign="top">
+                                                                            <img src="scrach.jpg"
+                                                                                 alt="" width="282" class="mImage">
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="CaptionLeftTextContentContainer"
+                                                                       align="left" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="265">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" class="TextContent">
+                                                                            <h3 style="margin: 12px 0 6px; line-height: 1.1; color: #352d84; font-size:21px;">
+                                                                                Wat gaan we doen?
+                                                                            </h3>
+                                                                            <p style="list-style: none; padding: 0; margin: 0; font-size:15px; line-height: 1.6; color: #393B3F;">
+                                                                                Wij gaan deze sessie aan de slag met de
+                                                                                programmeertaal Scratch. Met Scratch kun
+                                                                                je je eigen interactieve verhalen,
+                                                                                spelletjes en animaties maken en delen
+                                                                                met anderen. Aan het einde van de online
+                                                                                sessie hebben jullie een eigen doolhof
+                                                                                spel geprogrammeerd in Scratch door het
+                                                                                gebruik van onder andere "loops", logica
+                                                                                en functies.
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="CaptionBlock">
+                                            <tbody>
+                                            <tr>
+                                                <td class="CaptionBlockInner" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                           class="CaptionRightContentOuter" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="CaptionRightContentInner">
+                                                                <table class="CaptionRightImageContentContainer"
+                                                                       align="left" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="282">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td class="CaptionRightImageContent"
+                                                                            align="center" valign="top">
+                                                                            <img src="maze.png"
+                                                                                 class="mImage" alt="" width="282">
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <table class="CaptionRightTextContentContainer"
+                                                                       align="right" border="0" cellpadding="0"
+                                                                       cellspacing="0" width="265">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" class="TextContent"
+                                                                            style="color: #393B3F;">
+                                                                            <table border="0" cellpadding="0"
+                                                                                   cellspacing="0">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td valign="top"
+                                                                                        class="TextContent">
+                                                                                        <h3 style="margin: 12px 0 6px; line-height: 1.1; color: #352d84; font-size:21px;">
+                                                                                            Wat heb je nodig?
+                                                                                        </h3>
+                                                                                        <p style="list-style: none; padding: 0; margin: 0; font-size:15px; line-height: 1.6; color: #393B3F;">
+                                                                                            Na het aanmelden ontvang je
+                                                                                            een mail met instructies
+                                                                                            voor de sessie. Accounts
+                                                                                            zijn niet nodig. Het is
+                                                                                            handig als je op een
+                                                                                            laptop/desktop kan werken,
+                                                                                            een tablet werkt minder goed
+                                                                                            omdat je een muis nodig
+                                                                                            hebt.
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td style="min-width: 100%; padding: 10px 18px;"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="TextBlock"
+                                               style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top" class="TextBlockInner" style="padding-top:9px;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" class="TextContentContainer"
+                                                           style="max-width:100%; min-width:100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="TextContent"
+                                                                style="padding: 0 0 15px; ">
+                                                                <h3 style="font-family: Helvetica, Arial; color: #352d84; font-size: 28px; text-align: left;">
+                                                                    Schrijf je nu in!</h3>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td style="min-width: 100%; padding: 4px 18px;"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="CaptionBlock">
+                                            <tbody>
+                                            <tr>
+                                                <td class="CaptionBlockInner" valign="top">
+
+                                                    <table class="QuarterTextContentContainer" align="left" border="0"
+                                                           cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="QuarterText" style="padding-left: 15px;">
+                                                                <p style="font-family: Helvetica, Arial; margin: 0; text-align: left; font-size:15px; line-height: 1.6; color: #393B3F;">
+                                                                    Je kan je aanmelden door een mail te sturen naar :
+                                                                    <a href="mailto:devoxx4kids@ordina.nl"
+                                                                       target="_blank">devoxx4kids@ordina.nl</a>
+                                                                    Vermeld daarin het volgende:
+
+                                                                <ul style="font-family: Helvetica, Arial; margin: 0; text-align: left; font-size:15px; line-height: 1.6; color: #393B3F;">
+                                                                    <li>Jouw (voor- en achter) naam</li>
+                                                                    <li>Je leeftijd</li>
+                                                                    <li>Je E-mailadres</li>
+                                                                    <li>De naam van een van je ouders/verzorgers</li>
+                                                                    <li>En graag willen we weten of je al ervaring hebt
+                                                                        met Scratch
+                                                                    </li>
+                                                                </ul>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td style="min-width: 100%; padding: 20px 18px;"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="TextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               style="width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top" class="TextBlockInner" style="padding: 22px 0 15px;">
+                                                    <table class="TextContentContainer" align="center" border="0"
+                                                           cellpadding="0" cellspacing="0" width="100%"
+                                                           style="width:100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="TextContent"
+                                                                style="padding: 0px 31px 9px;color: white; text-align: center;">
+
+                                                                <img border="0"
+                                                                     width="300"
+                                                                     src="https://www.ordina.nl/wp-content/themes/ordina/dist/images/svg/logo.svg">
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="DividerBlock" style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td style="min-width: 100%; padding: 15px 18px;"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" id="footerNote">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                   class="templateContainer">
+                                <tr>
+                                    <td valign="top" class="footerContainer">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="TextBlock"
+                                               style="min-width:100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td valign="top" class="TextBlockInner" style="padding-top:9px;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" class="TextContentContainer"
+                                                           style="max-width:100%; min-width:100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="TextContent"
+                                                                style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;  color: #393B3F; text-align: center; font-family:Helvetica; line-height:150%;">
+                                                                <p style="color: #393B3F; font-size: 13px;">
+                                                                    Dit e-mailbericht is verstuurd naar
+                                                                    kevin.rovers@ordina.nl.<br/><a
+                                                                        style="color: #007C89; font-weight: normal; text-decoration: underline;"
+                                                                        target="_top"
+                                                                        href="https://tracking.nljug.org/NLJUG_Mailvoorkeur_wijzigen?profile=5502246&amp;code=c16589b211c4064570ecd089445c8a8b&amp;cctw=AgQIAIAkASlIE4aGEOVv6HSHIg">Mailvoorkeur
+                                                                    wijzigen</a> <br>
+                                                                    U ontvangt deze e-mail uit hoofde van uw aanmelding
+                                                                    bij een van de merken van Reshift Digital BV. Op
+                                                                    alle uitingen is het <a
+                                                                        title="Privacy statement Reshift Digital BV"
+                                                                        style="color: #007C89; font-weight: normal; text-decoration: underline;"
+                                                                        target="_top"
+                                                                        href="https://tracking.nljug.org/privacy-statement?cctw=AgQIAIAkASlIEZaEEKV_anTmBA">privacy
+                                                                    statement</a> van Reshift Digital BV van toepassing.
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- // END TEMPLATE -->
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+
+</html>
